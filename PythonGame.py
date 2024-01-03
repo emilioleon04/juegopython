@@ -35,27 +35,27 @@ def scale_image(image, new_width):
     return pygame.transform.scale(image, scaled_size)
 
 # background
-bg = pygame.image.load('galaxia.jpg').convert_alpha()
+bg = pygame.image.load('images/galaxia.jpg').convert_alpha()
 bg = scale_image(bg, game_width)
 bg_scroll = 0
 
 # x-wing
 xwing_images = []
 for i in range (2):
-    xwing_image = pygame.image.load(f'xwing{i}.png').convert_alpha()
+    xwing_image = pygame.image.load(f'xwing/xwing{i}.png').convert_alpha()
     xwing_image = scale_image(xwing_image, 150)
     xwing_images.append(xwing_image)
     
 heart_images = []
 heart_image_index = 0
 for i in range(4):
-    heart_image = pygame.image.load(f'cora{i}.png').convert_alpha()
+    heart_image = pygame.image.load(f'cora/cora{i}.png').convert_alpha()
     heart_image = scale_image(heart_image, 40)
     heart_images.append(heart_image)
        
 asteroid_images = []
 for i in range (4):
-    asteroid_image = pygame.image.load(f'roca{i}.png').convert_alpha()
+    asteroid_image = pygame.image.load(f'roca/roca{i}.png').convert_alpha()
     asteroid_image = scale_image(asteroid_image, 70)
     asteroid_image = pygame.transform.flip(asteroid_image, True, False)
     asteroid_images.append(asteroid_image)
